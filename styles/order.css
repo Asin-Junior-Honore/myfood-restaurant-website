@@ -209,7 +209,7 @@ header::before {
 
 .user-details p {
   padding: 25px 0px;
-  color: white;
+  color: black;
 }
 
 .user-details form {
@@ -400,6 +400,41 @@ form textarea {
 .media p:hover {
   color: #e25111;
   background: white;
+}
+
+@media screen and (min-width: 1800px) {
+  .beforehead {
+    justify-content: space-around;
+    padding: 1rem 0rem 1rem 1rem;
+  }
+  header {
+    justify-content: space-around;
+  }
+  .items {
+    padding-right: 445px;
+  }
+  .base {
+    padding-left: 21em;
+    padding-right: 21em;
+  }
+  .inner-footer .basehr {
+    width: 76%;
+  }
+  .orderinghead h1,
+  .user-details p {
+    text-align: center;
+  }
+  .orderinghead .empty3 {
+    margin: auto;
+    position: unset;
+  }
+  input[type="button"] {
+    margin: 3em auto;
+    display: block;
+  }
+  .user-details form {
+    place-content: center;
+  }
 }
 
 @media screen and (min-width: 760px) and (max-width: 900px) {

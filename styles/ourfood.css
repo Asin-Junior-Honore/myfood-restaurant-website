@@ -571,6 +571,52 @@ header::before {
   color: #e25111;
   background: white;
 }
+
+@media screen and (min-width: 1800px) {
+  .beforehead {
+    justify-content: space-around;
+    padding: 1rem 0rem 1rem 1rem;
+  }
+  header {
+    justify-content: space-around;
+  }
+  .ourfood h1,
+  .foodhead h1 {
+    text-align: center;
+  }
+  .ourfood #empty,
+  .infood .foodhead .empty3 {
+    margin: auto;
+    position: unset;
+  }
+  .inner-food {
+    justify-content: space-around;
+    padding: 3em 17em;
+  }
+  .features {
+    justify-content: space-evenly;
+    padding: 5em 30em;
+  }
+  .infood .foodcard {
+    justify-content: center;
+    gap: 175px;
+  }
+
+  .foodcontent .innerfoodcontent {
+    place-content: center;
+  }
+  .items {
+    padding-right: 445px;
+  }
+  .base {
+    padding-left: 21em;
+    padding-right: 21em;
+  }
+  .inner-footer .basehr {
+    width: 76%;
+  }
+}
+
 @media screen and (min-width: 760px) and (max-width: 900px) {
   .beforehead {
     padding: 1rem 2rem 1rem 2rem;
@@ -641,9 +687,7 @@ header::before {
   .foodpic {
     justify-content: flex-start;
   }
-  /* .pic-api {
-    width: 340px;
-  } */
+
   .innerfood {
     width: 300px;
   }

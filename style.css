@@ -850,6 +850,52 @@ form textarea {
   color: #e25111;
   background: white;
 }
+@media screen and (min-width: 1800px) {
+  .beforehead {
+    justify-content: space-around;
+    padding: 1rem 0rem 1rem 1rem;
+  }
+  header {
+    justify-content: space-around;
+  }
+  .items2 {
+    width: 60%;
+    justify-content: space-around;
+  }
+  .inner-specialty {
+    justify-content: space-evenly;
+    width: 89%;
+    margin: auto;
+  }
+  .features {
+    justify-content: space-evenly;
+  }
+  .user-details form {
+    place-content: center;
+  }
+  .user-details p,
+  .orderinghead h1 {
+    text-align: center;
+  }
+  .base {
+    padding-left: 21em;
+    padding-right: 21em;
+  }
+  .mainstaff .staffhead .empty3,
+  .innerfooddisplay .foodsection .empty3,
+  .specialty #empty,
+  .orderinghead .empty3 {
+    margin: auto;
+    position: unset;
+  }
+  input[type="button"] {
+    margin: 3em auto;
+    display: block;
+  }
+  .inner-footer .basehr {
+    width: 76%;
+  }
+}
 
 @media screen and (min-width: 760px) and (max-width: 900px) {
   .beforehead {

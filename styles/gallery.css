@@ -11,7 +11,6 @@ header {
   justify-content: space-between;
   padding: 0.5rem 2rem;
   position: relative;
-  
 }
 
 header::before {
@@ -438,6 +437,33 @@ header::before {
 .media p:hover {
   color: #e25111;
   background: white;
+}
+@media screen and (min-width: 1800px) {
+  .beforehead {
+    justify-content: space-around;
+    padding: 1rem 0rem 1rem 1rem;
+  }
+  header {
+    justify-content: space-around;
+  }
+  .items {
+    padding-right: 445px;
+  }
+  .innerfooddisplay .foodsection .empty3 {
+    margin: auto;
+    position: unset;
+  }
+  .searchbox {
+    width: 80%;
+    margin: auto;
+  }
+  .base{
+    padding-left: 21em;
+    padding-right: 21em;
+  }
+  .inner-footer .basehr {
+    width: 76%;
+  }
 }
 
 /* for tablet view */

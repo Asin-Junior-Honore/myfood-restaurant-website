@@ -1,76 +1,59 @@
 let foodCategory = "American";
-let apienpoint = "put your api url here";
+let apiEndpoint = " your  API endpoint here ";
 
-let foodSection = document.querySelector(".allinfo");
-
+const foodSection = document.querySelector(".allinfo");
 let pictures = [];
+let count = 0;
 
-let pic = document.querySelector("#food1");
-let pic2 = document.querySelector("#food2");
-let Nxt = document.getElementById("next");
-let phoneNxt = document.getElementById("nxt3");
-let Prev = document.getElementById("prev");
-let count = 19;
-const api = async () => {
-  const res = await fetch(apienpoint);
+const api = async (endpoint) => {
+  const res = await fetch(endpoint);
   const data = await res.json();
-  //   console.log(data)
   return data;
 };
 
 window.addEventListener("DOMContentLoaded", async () => {
-  showfoodimages(count);
+  await showFoodImages();
 });
 
-showfoodimages = async (Foods) => {
-  images = await api();
-  pictures = images.meals.map((meals) => meals.strMealThumb);
-  //   console.log(pictures,pic2);
-  pic2.src = pictures[(Foods, count--)];
-  pic.src = pictures[(Foods, count++)];
+const showFoodImages = async () => {
+  const images = await api(apiEndpoint);
+  pictures = images.meals.map((meal) => meal.strMealThumb);
+  showNextImage();
 };
 
-Nxt.addEventListener("click", function () {
-  count++;
-  showfoodimages(count);
-  if (count > pictures.length - 1) {
-    count = 0;
+const showNextImage = () => {
+  const pic = document.querySelector("#food1");
+  const pic2 = document.querySelector("#food2");
+  pic.src = pictures[count];
+  pic2.src = pictures[(count + 1) % pictures.length];
+};
+
+const navigate = (direction) => {
+  if (direction === "next") {
+    count = (count + 1) % pictures.length;
+  } else if (direction === "prev") {
+    count = (count - 1 + pictures.length) % pictures.length;
   }
-});
+  showNextImage();
+};
 
-phoneNxt.addEventListener("click", function () {
-  count++;
-  showfoodimages(count);
-  if (count > pictures.length - 1) {
-    count = 0;
-  }
-});
+const Nxt = document.getElementById("next");
+const phoneNxt = document.getElementById("nxt3");
+const Prev = document.getElementById("prev");
 
-Prev.addEventListener("click", function () {
-  count--;
-  showfoodimages(count);
-  if (count < 0) {
-    count = pictures.length - 1;
-  }
-});
+Nxt.addEventListener("click", () => navigate("next"));
+phoneNxt.addEventListener("click", () => navigate("next"));
+Prev.addEventListener("click", () => navigate("prev"));
 
-const mainfood = async () => {
-  const foods = await api();
-
-  let foodItems = foods.meals
-    .map((object) => {
-      //   console.log(object);
-      return ` <img class="toshow" src=${object.strMealThumb} alt="">
-      
-      `;
-    })
-    .join("");
+const mainFood = async () => {
+  const foods = await api(apiEndpoint);
+  const foodItems = foods.meals.map((object) => `<img class="toshow" src=${object.strMealThumb} alt="">`).join("");
   foodSection.innerHTML = foodItems;
 };
-mainfood();
+mainFood();
 
-let togglebutton = document.querySelector(".menu");
-let links = document.querySelector(".navbars");
-togglebutton.addEventListener("click", () => {
+const toggleButton = document.querySelector(".menu");
+const links = document.querySelector(".navbars");
+toggleButton.addEventListener("click", () => {
   links.classList.toggle("active");
 });
