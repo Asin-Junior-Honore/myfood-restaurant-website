@@ -110,6 +110,9 @@ header::before {
 .logo h2 {
   font-size: 30px;
 }
+.logo h2 span{
+  color: #e25111;
+}
 
 .beforehead {
   background: black;
@@ -835,6 +838,23 @@ form textarea {
 }
 .media {
   display: flex;
+}
+.back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #e25111;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.back-to-top-btn:hover {
+  background-color: #e25111;
 }
 
 .media p {

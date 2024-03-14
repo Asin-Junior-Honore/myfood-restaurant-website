@@ -21,7 +21,7 @@
     </div>
     <header>
         <div class="logo">
-            <h2>MYFOOD AND I</h2>
+            <h2><span>MYFOOD</span> AND I</h2>
         </div>
         <nav class="navbars">
             <ul class="order1">
@@ -217,7 +217,7 @@
                             <p class="icon"><i class="fa-solid fa-phone"></i></p>
                             <p>090-344-4555</p>
                         </div>
-
+                        <button id="backToTopBtn" class="back-to-top-btn" onclick="backToTop()">Back to Top</button>
                         <div class="innercontact">
                             <p class="icon"><i class="fa-solid fa-envelope-open-text"></i></p>
                             <p>myfoodandi@gmail.com</p>
@@ -263,16 +263,10 @@
     </footer>
 
 
-    <script>
+    <script src="/js/order.js">
 
 
-        let togglebutton = document.querySelector(".menu")
-        let links = document.querySelector(".navbars")
-        // console.log(togglebutton, links)
-        togglebutton.addEventListener("click", () => {
-            // togglebutton.classList.toggle("active")
-            links.classList.toggle("active")
-        })
+
 
     </script>
 

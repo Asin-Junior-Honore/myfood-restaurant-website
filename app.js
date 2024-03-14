@@ -1,5 +1,5 @@
 let foodCategory = "American";
-let apiEndpoint = " your  API endpoint here ";
+let apiEndpoint = " yourapikey";
 
 const foodSection = document.querySelector(".allinfo");
 let pictures = [];
@@ -47,7 +47,9 @@ Prev.addEventListener("click", () => navigate("prev"));
 
 const mainFood = async () => {
   const foods = await api(apiEndpoint);
-  const foodItems = foods.meals.map((object) => `<img class="toshow" src=${object.strMealThumb} alt="">`).join("");
+  const foodItems = foods.meals
+    .map((object) => `<img class="toshow" src=${object.strMealThumb} alt="">`)
+    .join("");
   foodSection.innerHTML = foodItems;
 };
 mainFood();
@@ -56,4 +58,27 @@ const toggleButton = document.querySelector(".menu");
 const links = document.querySelector(".navbars");
 toggleButton.addEventListener("click", () => {
   links.classList.toggle("active");
+  if (links.classList.contains("active")) {
+    document.body.style.overflowY = "hidden";
+  } else {
+    document.body.style.overflowY = "auto";
+  }
 });
+// Function to show the back to top button
+function showBackToTopButton() {
+  var backToTopButton = document.getElementById("backToTopBtn");
+  if (window.pageYOffset > 300) {
+    // Adjust the scroll threshold as needed
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+}
+
+// Function to scroll back to top smoothly
+function backToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// Event listener for scroll event to show/hide back to top button
+window.addEventListener("scroll", showBackToTopButton);

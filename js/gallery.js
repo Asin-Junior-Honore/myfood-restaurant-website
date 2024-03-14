@@ -1,10 +1,9 @@
 const searchBtn = document.getElementById("searchbot");
 const displayHtml = document.querySelector(".allinfo");
 
-const api = async () => {
+const api = async (searchField) => {
   try {
-    const searchField = document.getElementById("searchinput").value.trim();
-    const apiEndpoint = `your -api-endpoint/${searchField}`;
+    const apiEndpoint = ` yourapikey`;
     const res = await fetch(apiEndpoint);
     const data = await res.json();
     return data;
@@ -15,9 +14,9 @@ const api = async () => {
   }
 };
 
-const showFoodImages = async () => {
+const showFoodImages = async (searchField) => {
   try {
-    const images = await api();
+    const images = await api(searchField);
     if (!images.meals) {
       alert("Sorry, we do not have this country food.😢");
       return;
@@ -36,9 +35,41 @@ const showFoodImages = async () => {
   }
 };
 
-searchBtn.addEventListener("click", showFoodImages);
+// Call showFoodImages function on page load to display American food
+window.addEventListener("load", () => {
+  showFoodImages("American");
+});
+
+searchBtn.addEventListener("click", () => {
+  const searchField = document.getElementById("searchinput").value.trim();
+  showFoodImages(searchField);
+});
+
 const toggleButton = document.querySelector(".menu");
 const links = document.querySelector(".navbars");
 toggleButton.addEventListener("click", () => {
   links.classList.toggle("active");
+  if (links.classList.contains("active")) {
+    document.body.style.overflowY = "hidden";
+  } else {
+    document.body.style.overflowY = "auto";
+  }
 });
+// Function to show the back to top button
+function showBackToTopButton() {
+  var backToTopButton = document.getElementById("backToTopBtn");
+  if (window.pageYOffset > 300) {
+    // Adjust the scroll threshold as needed
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+}
+
+// Function to scroll back to top smoothly
+function backToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// Event listener for scroll event to show/hide back to top button
+window.addEventListener("scroll", showBackToTopButton);

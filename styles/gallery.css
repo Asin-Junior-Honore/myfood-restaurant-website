@@ -111,6 +111,10 @@ header::before {
   font-size: 30px;
 }
 
+.logo h2 span{
+  color: #e25111;
+}
+
 .beforehead {
   background: black;
   color: white;
@@ -465,6 +469,24 @@ header::before {
     width: 76%;
   }
 }
+.back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #e25111;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.back-to-top-btn:hover {
+  background-color: #e25111;
+}
+
 
 /* for tablet view */
 @media screen and (min-width: 760px) and (max-width: 900px) {

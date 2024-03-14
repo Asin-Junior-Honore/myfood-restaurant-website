@@ -1,4 +1,5 @@
-const apiEndpoint = " your -api-endpoint "; // Replace with the API
+const apiEndpoint =
+  " yourapikey";
 const displayContainer = document.querySelector(".foodpic");
 let pictures = [];
 
@@ -43,4 +44,28 @@ const toggleButton = document.querySelector(".menu");
 const links = document.querySelector(".navbars");
 toggleButton.addEventListener("click", () => {
   links.classList.toggle("active");
+  if (links.classList.contains("active")) {
+    document.body.style.overflowY = "hidden";
+  } else {
+    document.body.style.overflowY = "auto";
+  }
 });
+
+// Function to show the back to top button
+function showBackToTopButton() {
+  var backToTopButton = document.getElementById("backToTopBtn");
+  if (window.pageYOffset > 300) {
+    // Adjust the scroll threshold as needed
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+}
+
+// Function to scroll back to top smoothly
+function backToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// Event listener for scroll event to show/hide back to top button
+window.addEventListener("scroll", showBackToTopButton);

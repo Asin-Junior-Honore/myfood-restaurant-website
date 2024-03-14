@@ -111,6 +111,10 @@ header::before {
   font-size: 30px;
 }
 
+.logo h2 span {
+  color: #e25111;
+}
+
 .beforehead {
   background: black;
   color: white;
@@ -400,6 +404,23 @@ form textarea {
 .media p:hover {
   color: #e25111;
   background: white;
+}
+.back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #e25111;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.back-to-top-btn:hover {
+  background-color: #e25111;
 }
 
 @media screen and (min-width: 1800px) {
