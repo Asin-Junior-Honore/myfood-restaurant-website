@@ -42,16 +42,6 @@ MyFood is fully responsive, ensuring a seamless experience whether you’re on a
    - Notice how the layout adjusts to fit your screen perfectly.
    - Continue browsing and searching for dishes with ease.
 
-## Screenshots 📸
-
-### Home Page
-![Home Page](screenshots/homepage.png)
-
-### Search Results
-![Search Results](screenshots/search-results.png)
-
-### Hover Effect
-![Hover Effect](screenshots/hover-effect.png)
 
 ## Setup and Installation 🛠️
 
