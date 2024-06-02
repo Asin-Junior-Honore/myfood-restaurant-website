@@ -66,25 +66,16 @@ MyFood is fully responsive, ensuring a seamless experience whether you’re on a
 
 ## Contributing 🤝
 
-We welcome contributions! If you have suggestions for improvements or want to add new features, feel free to open an issue or submit a pull request.
-
-## License 📜
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+I welcome contributions! If you have suggestions for improvements or want to add new features, feel free to open an issue or submit a pull request.
 
 ## Contact 📬
 
 For any questions or feedback, please contact us at:
-- **Email**: myfood@example.com
+- **Email**: asinhonore823@gmail.com
 - **Twitter**: [@MyFoodApp](https://twitter.com/MyFoodApp)
 
 ---
 
-Thank you for using MyFood! We hope you enjoy exploring and discovering new dishes from around the world. 🍴🌏
+Thank you for using MyFood! I hope you enjoy exploring and discovering new dishes from around the world. 🍴🌏
 
 ---
-
-### Acknowledgements 🙏
-
-- Special thanks to the developers who contributed to the API integration and responsive design.
-- Thanks to all our users for their valuable feedback and support.
