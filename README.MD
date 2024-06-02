@@ -72,7 +72,7 @@ I welcome contributions! If you have suggestions for improvements or want to add
 
 For any questions or feedback, please contact us at:
 - **Email**: asinhonore823@gmail.com
-- **Twitter**: [@MyFoodApp](https://twitter.com/MyFoodApp)
+- **Twitter**: [Asin_tech](https://twitter.com/Asin_tech)
 
 ---
 
